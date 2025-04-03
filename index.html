@@ -1682,6 +1682,28 @@
       cursor: pointer;
       transition: background-color 0.2s ease, border-color 0.2s ease;
     }
+
+    footer {
+      margin-top: 20px; /* Further reduced space above */
+      padding: 8px 0; /* Further reduced vertical padding */
+      border-top: 1px solid #eee; /* Lighter border */
+      font-size: 10px; /* Made font even smaller */
+      color: #6c757d; 
+      text-align: center; 
+      line-height: 1.4; /* Reduced line height again */
+    }
+
+    footer p {
+      margin-bottom: 5px; /* Further reduced space between paragraphs */
+    }
+
+    footer p:last-child {
+      margin-bottom: 0; /* Remove margin from last paragraph */
+    }
+
+    footer strong {
+      color: #495057; /* Slightly darker label */
+    }
   </style>
 </head>
 <body>
@@ -1761,6 +1783,12 @@
       
     </div> <!-- End main-content-area -->
   </div>
+  
+  <footer>
+    <p><strong>Data Privacy Notice:</strong> This tool does not store or retain any personal data. All processing is ephemeral and occurs entirely in your browser session.</p>
+    <p>NewCo Communications is committed to ensuring the security and protection of the personal information that we process, and to maintaining a compliant and consistent approach to data protection.</p>
+    <p>If you have any questions related to the General Data Protection Regulation (GDPR) (EU) 2016/679, please contact us.</p>
+  </footer>
   
   <script>
     // Tab switching logic

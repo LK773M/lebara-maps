@@ -122,6 +122,15 @@ document.getElementById("fileInput").addEventListener("change", async (e) => {
         if (fileNameDisplay) fileNameDisplay.textContent = "No file chosen"; // Reset span if no file
         return;
     }
+
+    // --- ADD FILE TYPE CHECK ---
+    if (!file.name.toLowerCase().endsWith('.xlsx')) {
+        alert("Invalid file type. Please upload an .xlsx file.");
+        e.target.value = null; // Clear the selected file
+        if (fileNameDisplay) fileNameDisplay.textContent = "No file chosen"; // Reset display
+        return; // Stop processing
+    }
+    // --- END FILE TYPE CHECK ---
     
     // Update the span with the selected file name
     if (fileNameDisplay) fileNameDisplay.textContent = file.name;
